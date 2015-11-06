@@ -1,0 +1,30 @@
+{
+  "name": "framework",
+  "version": "0.1.0",
+  "description": "a series of help libraries/functions for creating REST APIs using the node HTTP module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walterdn/framework.git"
+  },
+  "keywords": [
+    "framework",
+  ],
+  "author": "Walter Nicholas, Jenny Pollack, Will Kitchell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walterdn/framework/issues"
+  },
+  "homepage": "https://github.com/walterdn/framework#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-mocha": "^2.1.3",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3"
+  }
+}
