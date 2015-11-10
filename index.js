@@ -17,8 +17,6 @@ exports.setTrout = function(ext) {
 	}///iterates over file names in the user's current directory and adds those which have the 
 	// specified file extension (the ext parameter of setTrout) to the specifiedFiles array
 
-	console.log(specifiedFiles);
-
 	for (i=0; i<specifiedFiles.length; i++) {
 		var fileName = specifiedFiles[i];
 		console.log('Route supplied for ' + fileName);
