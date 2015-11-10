@@ -17,10 +17,10 @@ exports.setTrout = function(ext) {
 	}///iterates over file names in the user's current directory and adds those which have the 
 	// specified file extension (the ext parameter of setTrout) to the specifiedFiles array
 
-	for (i=0; i<specifiedFiles.length; i++) {
-		var fileName = specifiedFiles[i];
+	specifiedFiles.forEach(function(val) {
+		var fileName = val;
 		console.log('Route supplied for ' + fileName);
-		var path = '/' + specifiedFiles[i].split('.')[0]; //sets the path(or route) to the name of the file, without the file extension
+		var path = '/' + val.split('.')[0]; //sets the path(or route) to the name of the file, without the file extension
 		var content = fs.readFileSync(__dirname + '/../' + fileName);
 		troutr.get(path, function(req, res) {
 			if (ext !== 'html') res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -28,7 +28,7 @@ exports.setTrout = function(ext) {
 			res.write(content);
 			res.end();
 		});
-	}
+	});
 }
 
 exports.serveTrouts = function(port) {
